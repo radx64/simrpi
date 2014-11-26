@@ -2,32 +2,31 @@
 #include <stdio.h>
 
 int counter = 0;
-int counter_stop = 10;
+int counter_stop = 1000;
+int data;
+
+FILE *f = 0;
 
 void clock_interrupt(void)
 {
-	printf("ISR\n");
+	data = digitalRead(1);
+	fprintf(f, "%d", data);
 	++counter;
 }
 
 int main(void)
 {
-	FILE *f = fopen("out", "w");
+	f = fopen("out", "w");
 
 	wiringPiSetup();
 	pinMode(0, INPUT);
-	pullUpDnControl(0, PUD_DOWN);
+	pinMode(1, INPUT);
 	wiringPiISR(0, INT_EDGE_FALLING, clock_interrupt);
 
 	int temp = 0;
 	int i;
 
-	while(counter < counter_stop)
-	{
-		temp = digitalRead(0); 
-		fprintf(f, "%d", temp);
-		delay(500);
-	}
+	while(counter < counter_stop){}
 
 	fclose(f);
 
