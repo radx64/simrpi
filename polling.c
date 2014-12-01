@@ -1,47 +1,46 @@
 #include <wiringPi.h>
 #include <stdio.h>
 
-#define maxCounter 1000
+#define maxCounter 40000
 
 int counter = 0;
-int counter_stop = maxCounter;
 int data[maxCounter];
+int clock[maxCounter];
 
-FILE *f = 0;
-
-void clock_interrupt(void)
-{
-	data[counter] = digitalRead(0);
-	printf("%d", data[counter]);
-	if((counter % 16) == 0) printf("\n");
-	++counter;
-}
+FILE *data_fd = 0;
+FILE *clock_fd = 0;
 
 void saveDataToFile(void)
 {
+	data_fd = fopen("data.txt", "w");
+	clock_fd = fopen("clock.txt", "w");
+	
 	int i;
 	for(i = 0; i<maxCounter;++i)
 	{
-		fprintf(f,"%d\n", data[i]);
+		fprintf(data_fd, "%d\n", data[i]);
+		fprintf(clock_fd, "%d\n", clock[i]);
 	}
+	
+	fclose(data_fd);
+	fclose(clock_fd);
 }
 
 int main(void)
 {
-	f = fopen("out", "w");
-
 	wiringPiSetup();
 	pinMode(0, INPUT);
 	pinMode(1, INPUT);
-	wiringPiISR(1, INT_EDGE_RISING, clock_interrupt);
 
-	int temp = 0;
-	int i;
-
-	while(counter < counter_stop){}
+	while(counter < maxCounter)
+	{
+		data[counter] = digitalRead(0);
+		clock[counter] = digitalRead(1);
+		printf("%d\n", counter);
+		counter++;
+	}
 
 	saveDataToFile();
-	fclose(f);
 
 	return 0;
 }
