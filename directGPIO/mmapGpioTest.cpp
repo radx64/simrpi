@@ -13,10 +13,10 @@ void saveDataToFile(vector<char> & clock, vector<char> & data)
 	clock_fd = fopen("clock.txt", "w");
 	
 	int i;
-	for(i = 0; i<100000;++i)
+	for(i = 0; i<1000000;++i)
 	{
-		fprintf(data_fd, "%d\n", data[i]);
-		fprintf(clock_fd, "%d\n", clock[i]);
+		fprintf(data_fd, "%d", data[i]);
+		fprintf(clock_fd, "%d", clock[i]);
 	}
 	
 	fclose(data_fd);
@@ -31,7 +31,7 @@ int main(void){
 	rpiGpio.setPinDir(17,mmapGpio::INPUT); // set GPIO17 to input
 	rpiGpio.setPinDir(18,mmapGpio::INPUT); // set GPIO4 to output
 
-	for (int i = 0; i < 100000; ++i)
+	for (int i = 0; i < 1000000; ++i)
 	{
 		clock.push_back(rpiGpio.readPin(17));
 		data.push_back(rpiGpio.readPin(18));
