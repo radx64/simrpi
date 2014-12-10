@@ -7,7 +7,7 @@ INCLUDEDIR = ./  mmapGpioLib
 LIBSOURCEDIR = mmapGpioLib
 INCDIR  = $(patsubst %,-I%,$(INCLUDEDIR))
 
-OPT = -O0
+OPT = -O3
 DEBUG = -g
 WARN= -Wall
 

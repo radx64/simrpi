@@ -4,6 +4,8 @@
 
 using namespace std;
 
+const int TICKS_TO_READ = 2000000;
+
 FILE *data_fd = 0;
 FILE *clock_fd = 0;
 
@@ -13,7 +15,7 @@ void saveDataToFile(vector<char> & clock, vector<char> & data)
 	clock_fd = fopen("clock.txt", "w");
 	
 	int i;
-	for(i = 0; i<1000000;++i)
+	for(i = 0 ; i < TICKS_TO_READ ; ++i)
 	{
 		fprintf(data_fd, "%d", data[i]);
 		fprintf(clock_fd, "%d", clock[i]);
@@ -27,11 +29,11 @@ int main(void){
 	vector<char> clock;
 	vector<char> data;
 
-	mmapGpio rpiGpio; // instantiate an instance of the mmapGpio class
-	rpiGpio.setPinDir(17,mmapGpio::INPUT); // set GPIO17 to input
-	rpiGpio.setPinDir(18,mmapGpio::INPUT); // set GPIO4 to output
+	mmapGpio rpiGpio;
+	rpiGpio.setPinDir(17,mmapGpio::INPUT);
+	rpiGpio.setPinDir(18,mmapGpio::INPUT);
 
-	for (int i = 0; i < 1000000; ++i)
+	for (int i = 0 ; i < TICKS_TO_READ ; ++i)
 	{
 		clock.push_back(rpiGpio.readPin(17));
 		data.push_back(rpiGpio.readPin(18));
@@ -39,18 +41,21 @@ int main(void){
 	
 	saveDataToFile(clock, data);
 
-	/*if(rpiGpio.readPin(17) == mmapGpio::HIGH)
-		printf("Button not pressed\n"); // if GPIO17 is HIGH button not pressed (due to pull-up resistor)
-	else{
-		printf("Button is pressed....toggling LED\n"); //else if GPIO17 is low button is pressed
-	    while(rpiGpio.readPin(17) == mmapGpio::LOW ){ // repeat toggling of GPIO4 until GPIO17 goes back to HIGH i.e. button de-pressed
-			rpiGpio.writePinHigh(4); // write GPIO4 pin high
+/*
+	if(rpiGpio.readPin(17) == mmapGpio::HIGH)
+		printf("Button not pressed\n");
+	else
+	{
+		printf("Button is pressed....toggling LED\n");
+		while(rpiGpio.readPin(17) == mmapGpio::LOW )
+		{
+			rpiGpio.writePinHigh(4);
 			usleep(500000);
-            rpiGpio.writePinLow(4); // write GPIO4 pin low
-            usleep(500000);
+			rpiGpio.writePinLow(4);
+			usleep(500000);
 		}
 	}
-    */
+*/
 
 return 0;
 }
