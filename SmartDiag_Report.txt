@@ -1,0 +1,207 @@
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------                                                    --------------
+--------------   Gemalto SmartDiag v2.5 Report                    --------------
+--------------                                                    --------------
+--------------   2015-01-06 19:40:46                              --------------
+--------------                                                    --------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+--- Application Components -----------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+--- Computer Information -------------------------------------------------------
+
+OS Name: Microsoft Windows XP 
+Version: 5.1.2600 Service Pack 3
+System Name: SZWAGIER-BCB566
+Locale: Polska
+
+
+
+--------------------------------------------------------------------------------
+--- Accessible Smart Card Readers-----------------------------------------------
+
+Reader Name: Gemplus GemPC430 0
+Icon: OK/None
+Vendor: Gemplus
+Model: GemPC430
+Message: The reader is available for use.
+
+    Smart Card Name: [Unregistered Card]
+    Icon: OK/None
+    ATR: 3B E9 00 00 81 21 45 56 49 53 5F 49 4E 46 20 06 78
+    Protocol(s) Supported: T=1
+    Convention: Direct
+    Optimal Bit Duration: 372 clock cycles (default)
+    Programming Voltage: Vpp is not electrically connected.
+    Extra Guardtime N: 0
+    IFSC (T=1): 32 characters max. (default)
+    Character Waiting Time (T=1): 43 ETU max.
+    Character Waiting Time (T=1): 5.71/f second(s) max., where f is the clock frequency in MHz.
+    Error Detection Code (T=1): LRC (default)
+    Message: The card is available for use.
+             The card is currently not powered.
+
+
+
+--------------------------------------------------------------------------------
+--- System Folder --------------------------------------------------------------
+
+Component Name: Resource Manager
+Icon: OK/None
+Language: Polski
+File Name: scardsvr.exe
+File Version: 5.1.2600.5512
+Provider: Microsoft
+Message: The smart card service is available for use.
+
+
+Component Name: Driver Library
+Icon: OK/None
+SMCLib.sys File Version: 5.1.2600.0
+Provider: Microsoft
+Message: The driver library is available for use.
+
+
+Component Name: Smart Card Database
+Icon: OK/None
+Provider: Microsoft
+Message: Select a smart card in the database to view its description.
+
+    Smart Card Registration Entry: [Unregistered Card]
+    Icon: OK/None
+    ATR: 3B E9 00 00 81 21 45 56 49 53 5F 49 4E 46 20 06 78
+    ATR Mask: FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+
+    Smart Card Registration Entry: GemSAFE Smart Card (4K)
+    Icon: OK/None
+    Crypto Provider: Gemplus GemSAFE Card CSP v1.0
+    ATR: 3B 27 00 80 65 A2 04 01 01 37
+    ATR Mask: FF FF FF FF FF FF E5 FF FF FF
+
+    Smart Card Registration Entry: GemSAFE Smart Card (8K)
+    Icon: OK/None
+    Crypto Provider: Gemplus GemSAFE Card CSP v1.0
+    ATR: 3B A7 00 40 00 80 65 A2 08 00 00 00
+    ATR Mask: FF FF FF FF 00 FF FF FF FF 00 00 00
+
+    Smart Card Registration Entry: Schlumberger Cryptoflex 4K
+    Icon: OK/None
+    Primary Provider: E8 E2 B7 19
+    Crypto Provider: Schlumberger Cryptographic Service Provider
+    ATR: 3B E2 00 00 40 20 49 00
+    ATR Mask: FF FF FF FF FF FF FF 00
+
+    Smart Card Registration Entry: Schlumberger Cryptoflex 8K
+    Icon: OK/None
+    Primary Provider: E8 E2 B7 19
+    Crypto Provider: Schlumberger Cryptographic Service Provider
+    ATR: 3B 85 40 20 68 01 01 00 00
+    ATR Mask: FF FF FF FF FF FF FF 00 00
+
+    Smart Card Registration Entry: Schlumberger Cryptoflex 8K v2
+    Icon: OK/None
+    Primary Provider: E8 E2 B7 19
+    Crypto Provider: Schlumberger Cryptographic Service Provider
+    ATR: 3B 95 15 40 00 68 01 02 00 00
+    ATR Mask: FF FF FF FF 00 FF FF FF 00 00
+
+    Smart Card Registration Entry: Schlumberger Cryptoflex ActivCard
+    Icon: OK/None
+    Primary Provider: E8 E2 B7 19
+    Crypto Provider: Schlumberger Cryptographic Service Provider
+    ATR: 3B 05 68 01 01 02 05
+    ATR Mask: FF FF FF FF FF FF FF
+
+    Smart Card Registration Entry: Schlumberger Cryptoflex e-gate
+    Icon: OK/None
+    Primary Provider: E8 E2 B7 19
+    Crypto Provider: Schlumberger Cryptographic Service Provider
+    ATR: 3B 95 00 40 FF 62 01 01 00 00
+    ATR Mask: FF FF 00 FF FF FF FF FF 00 00
+
+    Smart Card Registration Entry: Schlumberger Cyberflex Access 16K
+    Icon: OK/None
+    Primary Provider: E8 E2 B7 19
+    Crypto Provider: Schlumberger Cryptographic Service Provider
+    ATR: 3B 16 94 81 10 06 01 00 00
+    ATR Mask: FF FF FF FF FF FF FF 00 00
+
+    Smart Card Registration Entry: Schlumberger Cyberflex Access Campus
+    Icon: OK/None
+    Primary Provider: E8 E2 B7 19
+    Crypto Provider: Schlumberger Cryptographic Service Provider
+    ATR: 3B 23 00 35 13 80
+    ATR Mask: FF FF FF FF FF FF
+
+    Smart Card Registration Entry: Siemens SICRYPT Base CSP V2
+    Icon: OK/None
+    Primary Provider: 01 11 0F A8 F8 D1 D0 11 B5 C5 00 A0 24 29 7E D9
+    Crypto Provider: Infineon SICRYPT Base Smart Card CSP
+    ATR: 3B 80 00 00 00 00 00 00 00 5C 50 43 53 80 00 00 D2 76 00 00 38 00 00 00
+    ATR Mask: FF 80 00 00 00 00 00 00 FF FF FF FF FF 80 00 00 FF FF FF FF FF 00 00 00
+
+
+Component Name: Setup Information Database
+Icon: OK/None
+Message: Select a setup information file in the database to view its description.
+
+    Inf File Entry: oem11.inf
+    Icon: OK/None
+    Source Disk Name: Installation Disc for Gemplus USB Smart Card readers
+    Provider: Gemplus
+    Driver Name: gemusb.sys
+    Driver Version: 12/04/2001, 2.1.0.0
+    Signature: $CHICAGO$
+    Message: The driver to which the setup information file refers can be found in the appropriate directory.
+             This usually means that the computer detected a compatible reader and has completed the installation.
+
+    Inf File Entry: oem12.inf
+    Icon: OK/None
+    Source Disk Name: Dekart Smart Card Reader Driver Installation Disk
+    Provider: Dekart
+    Driver Name: dekart38.sys
+    Driver Name: dekart38x64.sys
+    Driver Version: 08/08/2011, 1.1.6.1
+    Signature: $WINDOWS NT$
+    Message: The driver to which the setup information file refers cannot be found in the appropriate directory.
+             This usually means that the computer needs to detect a compatible reader to complete the installation.
+
+    Inf File Entry: smartcrd.inf
+    Icon: OK/None
+    Provider: Microsoft
+    Driver Version: 07/01/2001, 5.1.2600.5512
+    Signature: $Windows NT$
+    Device: American Express GCR435
+    Device: BULL SmarTLP3
+    Device: COMPAQ GCR410P
+    Device: GEMPLUS GPR400
+    Device: GEMPLUS GCR410P
+    Device: GEMPLUS GemPC430
+    Device: HP ProtectTools
+    Device: Litronic 220
+    Device: Schlumberger Reflex 20
+    Device: Schlumberger Reflex 30
+    Device: Schlumberger Reflex 72
+    Device: Schlumberger Reflex Lite
+    Device: SCM Microsystems SCR120
+    Device: SCM Microsystems SCR200
+    Device: SCM Microsystems SCR300
+    Device: SCM Microsystems SCR111
+    Device: Systemneeds External
+    Device: Omnikey AG CardMan 2020
+    Device: Omnikey AG CardMan 6020
+    Device: Omnikey AG CardMan 4000
+    Device: Omnikey AG CardMan 2010
+    Message: This setup information file is provided by Microsoft with this version of Windows.
+             It lists the smart card readers that are supported natively by the operating system.
+
+
